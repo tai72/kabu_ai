@@ -1,7 +1,6 @@
 import os
 import sys
 import pandas as pd
-import numpy as np
 import argparse
 
 sys.path.append('..')
@@ -53,6 +52,7 @@ class Train:
                 target.iloc[val_index], 
                 target.iloc[test_index]
             )
+            cb.train_process()
 
 if __name__ == '__main__':
     # Instance of argparse.
